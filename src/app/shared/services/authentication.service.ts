@@ -10,5 +10,7 @@ export class AuthenticationService {
   signin(user) {
     return this._http.post(`${BASE_URL}${Endpoint.LOGIN}`, user);
   }
-  signup() {}
+  signup(user) {
+    return this._http.post(`${BASE_URL}${Endpoint.SIGNUP}`, user);
+  }
 }

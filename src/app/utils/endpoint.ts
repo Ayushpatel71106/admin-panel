@@ -1,4 +1,4 @@
-const user = "user/";
+const user = "users/";
 export const Endpoint = {
   LOGIN: `${user}login`,
   SIGNUP: `${user}signup`,

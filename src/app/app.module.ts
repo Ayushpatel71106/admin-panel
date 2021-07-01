@@ -46,11 +46,13 @@ import { TabsModule } from "ngx-bootstrap/tabs";
 import { ChartsModule } from "ng2-charts";
 import { HttpClientModule } from "@angular/common/http";
 import { ReactiveFormsModule } from "@angular/forms";
+import { ToastrModule } from "ngx-toastr";
 
 @NgModule({
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    ToastrModule.forRoot(),
     AppRoutingModule,
     AppAsideModule,
     AppBreadcrumbModule.forRoot(),
