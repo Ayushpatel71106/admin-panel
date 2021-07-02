@@ -1,5 +1,7 @@
 import { Component } from "@angular/core";
 import { FormControl, FormGroup, FormsModule } from "@angular/forms";
+import { Router } from "@angular/router";
+import { ToastrService } from "ngx-toastr";
 import { AuthenticationService } from "../../shared/services/authentication.service";
 
 @Component({
@@ -8,7 +10,11 @@ import { AuthenticationService } from "../../shared/services/authentication.serv
 })
 export class LoginComponent {
   formdata: FormGroup;
-  constructor(private _authenticationservice: AuthenticationService) {
+  constructor(
+    private _authenticationservice: AuthenticationService,
+    private _toast: ToastrService,
+    private _router: Router
+  ) {
     this.formdata = new FormGroup({
       email: new FormControl(""),
       password: new FormControl(""),
@@ -17,6 +23,27 @@ export class LoginComponent {
   submit() {
     this._authenticationservice
       .signin(this.formdata.value)
-      .subscribe((response) => {});
+      .subscribe((response: any) => {
+        console.log(response);
+        if (response.status == "ok") {
+          this._toast
+            .success("Login", response.message, {
+              easeTime: 1000,
+              progressBar: true,
+              positionClass: "toast-top-center",
+              timeOut: 10000,
+            })
+            .onHidden.subscribe((e) => {
+              this._router.navigate(["/dashboard"]);
+            });
+        } else {
+          this._toast.error("Login", response.message, {
+            easeTime: 1000,
+            progressBar: true,
+            positionClass: "toast-top-center",
+            timeOut: 10000,
+          });
+        }
+      });
   }
 }

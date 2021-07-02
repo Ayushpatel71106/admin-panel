@@ -47,6 +47,9 @@ import { ChartsModule } from "ng2-charts";
 import { HttpClientModule } from "@angular/common/http";
 import { ReactiveFormsModule } from "@angular/forms";
 import { ToastrModule } from "ngx-toastr";
+import { AddEmployeeComponent } from "./views/employees/add-employee/add-employee.component";
+import { ManageEmployeeComponent } from "./views/employees/manage-employee/manage-employee.component";
+import { EditEmployeeComponent } from "./views/employees/edit-employee/edit-employee.component";
 
 @NgModule({
   imports: [
@@ -75,6 +78,9 @@ import { ToastrModule } from "ngx-toastr";
     P500Component,
     LoginComponent,
     RegisterComponent,
+    // AddEmployeeComponent,
+    // ManageEmployeeComponent,
+    // EditEmployeeComponent,
   ],
   providers: [
     {
