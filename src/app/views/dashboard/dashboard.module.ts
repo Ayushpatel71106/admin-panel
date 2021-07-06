@@ -19,8 +19,8 @@ import { ManageEmployeeComponent } from "../employees/manage-employee/manage-emp
   ],
   declarations: [
     DashboardComponent,
-    AddEmployeeComponent,
-    ManageEmployeeComponent,
+    // AddEmployeeComponent,
+    // ManageEmployeeComponent,
   ],
 })
 export class DashboardModule {}

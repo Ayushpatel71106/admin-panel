@@ -35,12 +35,12 @@ export const navItems: INavData[] = [
     children: [
       {
         name: "Add Employee",
-        url: "dashboard/add-employee",
+        url: "base/add-employee",
         icon: "icon-puzzle",
       },
       {
         name: "Manage Employee",
-        url: "dashboard/manage-employee",
+        url: "base/manage-employee",
         icon: "icon-puzzle",
       },
     ],

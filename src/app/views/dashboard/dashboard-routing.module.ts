@@ -12,10 +12,10 @@ const routes: Routes = [
     data: {
       title: "Dashboard",
     },
-    children: [
-      { path: "add-employee", component: AddEmployeeComponent },
-      { path: "manage-employee", component: ManageEmployeeComponent },
-    ],
+    // children: [
+    //   { path: "add-employee", component: AddEmployeeComponent },
+    //   { path: "manage-employee", component: ManageEmployeeComponent },
+    // ],
   },
 ];
 

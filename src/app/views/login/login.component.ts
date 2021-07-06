@@ -26,6 +26,7 @@ export class LoginComponent {
       .subscribe((response: any) => {
         console.log(response);
         if (response.status == "ok") {
+          this._authenticationservice.Saveuser(response);
           this._toast
             .success("Login", response.message, {
               easeTime: 1000,
