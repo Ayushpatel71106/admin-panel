@@ -1,57 +1,28 @@
 <div class="col-lg-12">
   <div class="card">
     <div class="card-header">
-      <i class="fa fa-align-justify"></i> Bordered Table
+      <i class="fa fa-align-justify"></i> Employee Table
     </div>
     <div class="card-body">
       <table class="table table-bordered">
         <thead>
           <tr>
-            <th>Username</th>
-            <th>Date registered</th>
-            <th>Role</th>
-            <th>Status</th>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Salary</th>
+            <th>Action</th>
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>Pompeius René</td>
-            <td>2012/01/01</td>
-            <td>Member</td>
+          <tr *ngFor="let emp of Employees">
+            <td>{{ emp.id }}</td>
+            <td>{{ emp.name }}</td>
+            <td>{{ emp.email }}</td>
+            <td>{{ emp.salary }}</td>
             <td>
-              <span class="badge badge-success">Active</span>
-            </td>
-          </tr>
-          <tr>
-            <td>Paĉjo Jadon</td>
-            <td>2012/02/01</td>
-            <td>Staff</td>
-            <td>
-              <span class="badge badge-danger">Banned</span>
-            </td>
-          </tr>
-          <tr>
-            <td>Micheal Mercurius</td>
-            <td>2012/02/01</td>
-            <td>Admin</td>
-            <td>
-              <span class="badge badge-secondary">Inactive</span>
-            </td>
-          </tr>
-          <tr>
-            <td>Ganesha Dubhghall</td>
-            <td>2012/03/01</td>
-            <td>Member</td>
-            <td>
-              <span class="badge badge-warning">Pending</span>
-            </td>
-          </tr>
-          <tr>
-            <td>Hiroto Šimun</td>
-            <td>2012/01/21</td>
-            <td>Staff</td>
-            <td>
-              <span class="badge badge-success">Active</span>
+              <a href="" class="p-2 text-info"><i class="fa fa-edit"></i></a>
+              <a href="" class="p-3 text-danger"><i class="fa fa-trash"></i></a>
             </td>
           </tr>
         </tbody>
